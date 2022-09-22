@@ -25,3 +25,6 @@ jobs:
 
     - name: Deploy helmchart
       run: helm install nodejs ./nodejs-app
+      shell: bash
+      env:
+        KUBECONFIG: ${{ env.KUBECONFIG }}
