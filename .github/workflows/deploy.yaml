@@ -8,7 +8,7 @@ on:
       - .github/workflows/deploy.yaml
 
 env:
-  KUBECONFIG: ~/.kube/config
+  KUBECONFIG: ~/.kube_config
 
 jobs:
   build:
