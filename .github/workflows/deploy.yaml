@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
     paths:
       - nodejs-app/Chart.yaml
+      - .github/workflows/deploy.yaml
 env:
   KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
