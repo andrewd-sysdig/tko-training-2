@@ -6,8 +6,6 @@ on:
     paths:
       - nodejs-app/Chart.yaml
       - .github/workflows/deploy.yaml
-env:
-  KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
 jobs:
   build:
@@ -16,6 +14,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+    
+    - name: Write KUBECONFIG file
+      run: echo ${{ secrets.KUBECONFIG }} > ~/.kube/config
 
     - name: Deploy helmchart1
       run: helm install nodejs ./nodejs-app
