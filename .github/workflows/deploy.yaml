@@ -21,7 +21,7 @@ jobs:
     - run: |
         echo "$kconfig" > ${{ env.KUBECONFIG }}
         export KUBECONFIG=${{ env.KUBECONFIG }}
-        helm install nodejs ./nodejs-app
+        helm upgrade --namespace tko-app --install nodejs ./nodejs-app
       shell: bash
       env:
         kconfig: ${{ secrets.KUBECONFIG }}
