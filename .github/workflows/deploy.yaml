@@ -16,5 +16,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Deploy helmchart
+    - name: Deploy helmchart1
       run: helm install nodejs ./nodejs-app
