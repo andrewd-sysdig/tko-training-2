@@ -1,4 +1,4 @@
-name: Build, Scan, Push, Deploy Pipeline
+name: Build, Scan, Push
 
 on:
   workflow_dispatch:
